@@ -1,0 +1,42 @@
+.ancients-container {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header";
+    justify-items: center;
+    gap: 10px;
+
+
+    margin: 0 auto;
+    outline: 1px solid red;
+}
+
+.ancients-header {
+    grid-area: header;
+}
+
+.card {
+    outline: 1px solid blue;
+}
+
+.card-ancient-image {
+    width: 15vw;
+    height: auto;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: ease-out 0.3s;
+}
+
+.card-ancient:hover {
+    box-shadow: 0 0 5px 5px #ef5502;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
