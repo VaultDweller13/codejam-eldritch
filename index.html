@@ -9,11 +9,48 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">Header</header>
+    <header class="header">
+        <div class="container current-picks-container">
+            <ul class="list current-picks">
+                <li class="list-item current-pick-item current-pick-ancient">Ancient: </li>
+                <li class="list-item current-pick-item current-pick-difficulty">Difficulty: </li>
+            </ul>
+        </div>
+    </header>
     <main class="main">
-        <div class="ancients-container">
-            <h2 class="header div-header ancients-header">Pick an Ancient</h2>
-
+        <div class="container ancients-container">
+            <h2 class="heading div-heading ancients-heading">Pick an Ancient</h2>
+        </div>
+        <div class="container difficulty-container hidden">
+            <h2 class="heading div-heading difficulty-heading">Choose difficulty</h2>
+            <ul class="list difficulties">
+                <li class="list-item difficulties-item">Very easy</li>
+                <li class="list-item difficulties-item">Easy</li>
+                <li class="list-item difficulties-item difficulty-active">Normal</li>
+                <li class="list-item difficulties-item">Hard</li>
+                <li class="list-item difficulties-item">Very hard</li>
+            </ul>
+            <div class="difficulty-description">Набор остается нетронутым</div>
+            <button class="button-difficulty">Confirm</button>
+        </div>
+        <div class="container cards-container hidden">
+            <div class="deck-structure">
+                <ul class="list stage-list first-stage">
+                    <li class="list-item stage-item green-cards-count"></li>
+                    <li class="list-item stage-item brown-cards-count"></li>
+                    <li class="list-item stage-item blue-cards-count"></li>
+                </ul>
+                <ul class="list stage-list second-stage">
+                    <li class="list-item stage-item green-cards-count"></li>
+                    <li class="list-item stage-item brown-cards-count"></li>
+                    <li class="list-item stage-item blue-cards-count"></li>
+                </ul>
+                <ul class="list stage-list third-stage">
+                    <li class="list-item stage-item green-cards-count"></li>
+                    <li class="list-item stage-item brown-cards-count"></li>
+                    <li class="list-item stage-item blue-cards-count"></li>
+                </ul>
+            </div>
         </div>
     </main>
     <footer class="footer">Footer</footer>

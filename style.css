@@ -1,27 +1,33 @@
-.ancients-container {
-    max-width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "header header header header";
-    justify-items: center;
-    gap: 10px;
-
-
-    margin: 0 auto;
-    outline: 1px solid red;
+:root {
+    font-size: 10px;
+    color: #c6c6c6;
 }
 
-.ancients-header {
-    grid-area: header;
+body {
+    height: 100vh;
+    margin: 0;
+
+    background: url(./assets/home.png) center / cover;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.heading {
+    font-size: 3.2rem;
+    text-align: center;
 }
 
 .card {
-    outline: 1px solid blue;
-}
-
-.card-ancient-image {
-    width: 15vw;
-    height: auto;
+    transition: ease-out 0.3s;
 }
 
 .card:hover {
@@ -29,14 +35,132 @@
     transition: ease-out 0.3s;
 }
 
-.card-ancient:hover {
+/* Ancients picking block */
+.ancients-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "ancients-heading ancients-heading ancients-heading ancients-heading";
+    justify-items: center;
+    gap: 10px;
+}
+
+.ancients-heading {
+    grid-area: ancients-heading;
+}
+
+.card-image {
+    width: 15vw;
+    height: auto;
+}
+
+.card-ancient-image:hover {
     box-shadow: 0 0 5px 5px #ef5502;
 }
 
+/* Difficulty picking block */
+.difficulty-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "difficultiy-heading difficultiy-heading"
+                         "difficulties difficulties-description"
+                         "button button";
+}
+
+.difficulty-heading {
+    grid-area: difficultiy-heading;
+}
+
+.difficulties {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    grid-area: difficulties;
+
+
+    font-size: 2rem;
+}
+
+.difficulties-item {
+    padding: 1rem;
+}
+
+.difficulties-item:hover {
+    cursor: pointer;
+    background-color: #c6c6c6;
+    color: #000000;
+}
+
+.difficulty-description {
+    background-color: #aaaaaa;
+    color: #000000;
+}
+
+.difficulty-active {
+    background-color: #aaaaaa;
+    color: #000000;
+}
+
+.difficulty-description {
+    grid-area: difficulties-description;
+
+    padding: 1rem;
+
+    font-size: 2rem;
+}
+
+.button-difficulty {
+    max-width: 20%;
+    grid-area: button;
+
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px; 
+
+    background-color: #aaaaaa;
+}
+
+.button-difficulty:hover {
+    cursor: pointer;
+}
+
+.button-difficulty:active {
+    transform: scale(0.95);
+}
+
+/* Block visibility */
 .visible {
+    display: grid;
     visibility: visible;
 }
 
 .hidden {
+    display: none;
     visibility: hidden;
+}
+
+/* Deck preparation */
+.stage-list {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+
+    margin-bottom: 5px;
+}
+
+.stage-item {
+    padding: 5px;
+}
+
+.green-cards-count {
+    background-color: green;
+}
+
+.brown-cards-count {
+    background-color: brown;
+}
+
+.blue-cards-count {
+    background-color: blue;
 }
