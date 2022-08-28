@@ -164,3 +164,14 @@ body {
 .blue-cards-count {
     background-color: blue;
 }
+
+.deck-container {
+    display: flex;
+    gap: 15px;
+}
+
+.card-back {
+    width: 285px;
+    height: 419px;
+    background: url(./assets/mythicCardBackground.png);
+}
