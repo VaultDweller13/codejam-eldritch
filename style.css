@@ -154,6 +154,16 @@ body {
 }
 
 /* Deck preparation */
+.cards-container {
+    display: grid; 
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: 10px;
+}
+
+.deck-structure {
+    font-size: 1.6rem;
+}
+
 .stage-list {
     display: flex;
     list-style: none;

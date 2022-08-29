@@ -96,7 +96,7 @@ function showCurrentPicks() {
   const currentAncientBlock = header.querySelector('.current-pick-ancient');
   const currentDifficultyBlock = header.querySelector('.current-pick-difficulty');
 
-  if (currentAncient) currentAncientBlock.textContent = `Древний: ${currentAncient.name}`;
+  if (currentAncient) currentAncientBlock.textContent = `Древний: ${currentAncient.nameRU}`;
   if (currentDifficulty) currentDifficultyBlock.textContent = `Сложность: ${currentDifficulty.name}`;
 }
 

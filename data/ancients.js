@@ -4,6 +4,7 @@ const ancientsData = [
   {
     id: 'azathoth',
     name: 'azathoth',
+    nameRU: 'Азатот',
     cardFace: Ancients.azathoth,
     firstStage: {
       greenCards: 1,
@@ -24,6 +25,7 @@ const ancientsData = [
   {
     id: 'cthulhu',
     name: 'cthulhu',
+    nameRU: 'Ктулху',
     cardFace: Ancients.cthulhu,
     firstStage: {
       greenCards: 0,
@@ -44,6 +46,7 @@ const ancientsData = [
   {
     id: 'iogSothoth',
     name: 'iogSothoth',
+    nameRU: 'Йог-Сотот',
     cardFace: Ancients.iogSothoth,
     firstStage: {
       greenCards: 0,
@@ -64,6 +67,7 @@ const ancientsData = [
   {
     id: 'shubNiggurath',
     name: 'shubNiggurath',
+    nameRU: 'Шуб-Ниггурат',
     cardFace: Ancients.shubNiggurath,
     firstStage: {
       greenCards: 1,
