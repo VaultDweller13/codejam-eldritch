@@ -11,15 +11,11 @@ body {
 }
 
 .header {
-    height: 20vh;
+    height: 10vh;
 }
 
 .main {
-    height: 60vh;
-}
-
-footer {
-    height: 20vh;
+    height: 80vh;
 }
 
 .container {
@@ -197,3 +193,38 @@ footer {
     width: 285px;
     height: 419px;
 }
+
+/* Footer */
+.footer {
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, .15); 
+    backdrop-filter: blur(5px);
+}
+
+.social {
+    display: flex;
+    gap: 0.5rem
+  }
+  
+  .copywright {
+    font-size: 2rem;
+  }
+  
+  .github-logo {
+    display: block;
+    width: 64px;
+    height: 64px;
+  
+    background: url(./assets/github-logo.svg) center / contain no-repeat;
+  }
+  
+  .rsschool-logo {
+    width: 64px;
+    height: 64px;
+  
+    background: url(./assets/rsschool-logo.svg) center / contain no-repeat;
+  }
