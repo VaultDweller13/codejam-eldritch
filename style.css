@@ -1,4 +1,9 @@
+@font-face {
+    font-family: Gothic;
+    src: url(./assets/GothicRus\ Condenced.ttf);
+}
 :root {
+    font-family: Gothic, 'Times New Roman', Times, serif;
     font-size: 10px;
     color: #c6c6c6;
 }
@@ -130,6 +135,8 @@ body {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 10px; 
+
+    font-family: Gothic, 'Times New Roman', Times, serif;
 
     background-color: #aaaaaa;
 }
