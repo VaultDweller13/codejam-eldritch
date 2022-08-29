@@ -15,7 +15,6 @@ export function prepareDeck(currentAncient, difficulty) {
   const cardSet = getCardSet(difficulty);
   const stageDecks = splitByStage(cardSet);
   const combinedDeck = combineStageDecks(stageDecks);
-  console.log(combinedDeck);
 
   return combinedDeck;
 }
