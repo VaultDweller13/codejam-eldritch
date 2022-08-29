@@ -10,6 +10,18 @@ body {
     background: url(./assets/home.png) center / cover;
 }
 
+.header {
+    height: 20vh;
+}
+
+.main {
+    height: 60vh;
+}
+
+footer {
+    height: 20vh;
+}
+
 .container {
     max-width: 80%;
     margin: 0 auto;
@@ -35,6 +47,11 @@ body {
     transition: ease-out 0.3s;
 }
 
+/* Current choice block */
+.current-picks {
+    font-size: 1.6rem;
+}
+
 /* Ancients picking block */
 .ancients-container {
     display: grid;
@@ -48,7 +65,7 @@ body {
     grid-area: ancients-heading;
 }
 
-.card-image {
+.card-ancient-image {
     width: 15vw;
     height: auto;
 }
@@ -174,4 +191,9 @@ body {
     width: 285px;
     height: 419px;
     background: url(./assets/mythicCardBackground.png);
+}
+
+.card-face {
+    width: 285px;
+    height: 419px;
 }

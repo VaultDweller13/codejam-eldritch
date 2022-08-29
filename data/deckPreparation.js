@@ -88,22 +88,41 @@ function getCardSet(difficulty) {
     blueCards = mythicCards.blueCards.filter(card => card.difficulty !== 'hard');
     brownCards = mythicCards.brownCards.filter(card => card.difficulty !== 'hard');
     greenCards = mythicCards.greenCards.filter(card => card.difficulty !== 'hard');
+
+    cardsByColorArray = [blueCards, brownCards, greenCards];
+    cardsByColorArray.forEach(array => shuffle(array));
   }
 
   if (difficulty === difficulties[2]) {
-    return mythicCards;
+    cardsByColorArray = [mythicCards.blueCards, mythicCards.brownCards, mythicCards.greenCards];
   }
 
   if (difficulty === difficulties[3]) {
     blueCards = mythicCards.blueCards.filter(card => card.difficulty !== 'easy');
     brownCards = mythicCards.brownCards.filter(card => card.difficulty !== 'easy');
     greenCards = mythicCards.greenCards.filter(card => card.difficulty !== 'easy');  
+
+    cardsByColorArray = [blueCards, brownCards, greenCards];
+    cardsByColorArray.forEach(array => shuffle(array));
   }
 
   if (difficulty === difficulties[4]) {
     blueCards = mythicCards.blueCards.filter(card => card.difficulty !== 'easy');
     brownCards = mythicCards.brownCards.filter(card => card.difficulty !== 'easy');
     greenCards = mythicCards.greenCards.filter(card => card.difficulty !== 'easy');
+
+    cardsByColorArray = [blueCards, brownCards, greenCards];
+    cardsByColorArray.forEach((array, index) => {
+      shuffle(array);
+      const hardArray = array.filter(card => card.difficulty === 'hard');
+
+      if (hardArray.length < cardsTotals[index]) {
+        const normalArray = array.filter(card => card.difficulty === 'normal');
+        cardsByColorArray[index] = hardArray.concat(normalArray.slice(0, cardsTotals[index] - hardArray.length));
+      } else {
+        cardsByColorArray[index] = hardArray.slice(0, cardsTotals[index]);
+      }
+    });
   }
 
   return cardsByColorArray;
